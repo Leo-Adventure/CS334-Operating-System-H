@@ -565,55 +565,34 @@ int pipe_function(char *line){
 int redirect_function(char * line){
     
     int size = strlen(line);
-    // int input_flag = 0;
+
     int output_flag = 0;
-    // int input_idx = -1;
+
     int output_idx = size;
-    // char *input_file = (char*) malloc(sizeof(char) * 32);
-    // if(input_file == NULL){
-    //     perror("Allocation failure\n");
-    //     return -1;
-    // }
+
     char *output_file = (char*) malloc(sizeof(char) * 256);
     if(output_file == NULL){
         perror("Allocation failure\n");
-        // free(input_file);
+    
         return -1;
     }
     char *command = (char*) malloc(sizeof(char) * 32);
-    // if(command == NULL){
-    //     perror("Allocation failure\n");
-    //     free(input_file);
-    //     free(output_file);
-    //     return -1;
-    // }
+    
    
     // 初始化
     // memset(input_file, 0, sizeof(char) * 32);
     memset(output_file, 0, sizeof(char) * 256);
     memset(command, 0, sizeof(char) * 32);
 
-   
-
     for(int i = 0; i < size; i++){
-        // if(line[i] == '<'){
-        //     input_flag = 1;
-        //     input_idx = i;
-        //     if(i == 0){
-        //         perror("Missing parameter\n");
-        //         free(input_file);
-        //         free(output_file);
-        //         return -1;
-        //     }
-        // }
-        
+
 
         if(line[i] == '>'){
             output_flag = 1;
             output_idx = i;
             if(i == size - 1 || i == size - 2){
                 perror("Missing parameter\n");
-                // free(input_file);
+           
                 free(output_file);
                 return -1;
             }
@@ -635,7 +614,7 @@ int redirect_function(char * line){
  
     if(rc < 0){
         perror("Fork Failure\n");
-        // free(input_file);
+
         free(output_file);
         return -1;
     }else if(rc == 0){ // 子进程
@@ -644,18 +623,7 @@ int redirect_function(char * line){
             freopen(output_file, "w", stdout); 
         }
        
-        // if(input_flag){
-        //     freopen(input_file, "r", stdin);
-        // }
-       
         
-       
-        // memset(command, 0, sizeof(char)*  512);
-        
-        // int cnt = 0;
-        // for(int i = input_idx + 1; i < output_idx; i++){
-        //     command[cnt ++] = line[i];
-        // }
         char ** tokens = split(command);
         int status = execute(tokens);
         if(status != 1){
@@ -677,58 +645,9 @@ int redirect_function(char * line){
 
     }
 
-    // free(input_file);
     free(output_file);
     return 1;
 
-    // int outNum = 0;
-    // char *outFile = NULL;
-    // int endIdx = strlen(line); // 指令在重定向前的终止下标
-
-    // for (int i = 0; i < strlen(line); i++) {
-    //     if (line[i] == '>') { // 输出重定向
-    //         outNum++;
-    //         if (i+1 < strlen(line))
-    //             outFile = &line[i+1];
-    //         else{
-    //             printf("Parameters are missing\n");
-    //         }
-    //         endIdx = i;
-    //     }
-    // }
-    // /* 处理重定向 */
-    // if (outNum > 1) { // 输出重定向符超过一个
-    //     printf("Output redirection more than one\n");
-    //     return 1;
-    // }
-
-    // int result = 1;
-    // pid_t pid = fork();
-    // if (pid == -1) {
-    //     result = 0;
-    // } else if (pid == 0) {
-    //     /* 输入输出重定向 */
-    //     if (outNum == 1){
-    //         freopen(outFile, "w", stdout);
-    //     }
-    //     /* 执行命令 */
-    //     line[endIdx] = '\0';
-    //     char** char_list = split(line);
-    //     int stute = execute(char_list);
-    //     free(char_list);
-    //     if (stute == -1){
-    //         exit(1);//子进程报错后销毁，返回父进程
-    //     };
-    //     exit(0);
-    // } else {
-    //     int status;
-    //     waitpid(pid, &status, 0);
-    //     int err = WEXITSTATUS(status); // 读取子进程的返回码
-
-    //     if (err) { 
-    //         printf("Error: %s\n", strerror(err));
-    //     }
-    // }
-    // return result;
+    
 }
 
