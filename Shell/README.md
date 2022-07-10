@@ -18,9 +18,9 @@
 
 输出结果截图如下所示。
 
-<img src="C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20220710104702410.png" alt="image-20220710104702410" style="zoom:50%;" /> wsl 运行结果
+<img src="adjunct\wsl.png" style="zoom:50%;" /> wsl 运行结果
 
-<img src="C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20220710105434520.png" alt="image-20220710105434520" style="zoom:50%;" /> 虚拟机内运行结果
+ <img src="adjunct/vm.png" style="zoom:50%;" />虚拟机内运行结果
 
 不失一般性，以下的测试将会使用 wsl 进行测试。
 
@@ -46,7 +46,7 @@ int pwd_function(char **tokens)
 
 下面是功能截图
 
-![image-20220710105744352](C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20220710105744352.png)
+![](adjunct/base1.png)
 
 ### ls
 
@@ -135,7 +135,7 @@ int ls_function(char **tokens)
 
 实现功能截图如下：
 
-![image-20220710105738883](C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20220710105738883.png)
+![](adjunct/base1.png)
 
 ### cd
 
@@ -163,11 +163,11 @@ int cd_function(char **tokens)
 }
 ```
 
-![image-20220710105750878](C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20220710105750878.png)
+![](adjunct/base1.png)
 
-![image-20220710105934233](C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20220710105934233.png)
+![image-20220710105934233](adjunct\cd1.png)
 
-![image-20220710110226496](C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20220710110226496.png)
+![image-20220710110226496](adjunct\cd2.png)
 
 ### date
 
@@ -218,7 +218,7 @@ int date_function(char **tokens)
 
 实现的功能截图如下所示：
 
-<img src="C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20220710110106961.png" alt="image-20220710110106961" style="zoom:50%;" />
+<img src="adjunct\date.png" alt="image-20220710110106961" style="zoom:50%;" />
 
 ### help
 
@@ -250,7 +250,7 @@ int help(char **tokens)
 
 功能截图如下：
 
-![image-20220710110417385](C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20220710110417385.png)
+![image-20220710110417385](adjunct\help.png)
 
 ### echo
 
@@ -303,7 +303,7 @@ int echo_function(char **tokens)
 
 功能截图如下：
 
-![image-20220710110754468](C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20220710110754468.png)
+![image-20220710110754468](adjunct\echo.png)
 
 ### exit
 
@@ -320,7 +320,7 @@ int exit_function(char **tokens)
 }
 ```
 
-![image-20220710111020002](C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20220710111020002.png)
+![image-20220710111020002](adjunct\exit.png)
 
 ### 其余 Shell 指令
 
@@ -374,9 +374,9 @@ int outer_process(char **tokens)
 
 实现之后，功能截图如下（进行了 `ps -al`， `wc`，`uname`， `ping` ，`clear`的测试）：
 
-![image-20220710111740723](C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20220710111740723.png)
+![image-20220710111740723](adjunct\bonus.png)
 
-![image-20220710113019052](C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20220710113019052.png)
+![image-20220710113019052](adjunct\clear.png)
 
 ### Pipe 管道
 
@@ -580,13 +580,13 @@ int redirect_function(char * line){
 
 和Pipe 管道的功能实现截图如下：
 
-![image-20220710113433107](C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20220710113433107.png)
+![image-20220710113433107](adjunct\pipe.png)
 
 运行之后，两个文件内容截图如下：
 
-![image-20220710113533409](C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20220710113533409.png)
+![image-20220710113533409](adjunct\include.png)
 
-![image-20220710113536982](C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20220710113536982.png)
+![image-20220710113536982](adjunct\shell.png)
 
 实现了基本的管道输出以及FIFO重定向功能。
 
