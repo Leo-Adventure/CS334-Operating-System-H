@@ -378,7 +378,7 @@ int outer_process(char **tokens)
 
 <img src="adjunct\bonus.png" alt="image-20220710110106961" style="zoom:100%;" />
 
-![image-20220710113019052](adjunct\clear.png)
+<img src="adjunct\clear.png" alt="image-20220710110106961" style="zoom:100%;" />
 
 ### Pipe 管道
 
