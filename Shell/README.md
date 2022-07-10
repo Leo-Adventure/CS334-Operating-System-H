@@ -1,3 +1,5 @@
+![](https://img.shields.io/apm/l/vim-mode)
+
 ## Simple Shell
 
 在这次的操作系统 Assignment 2 当中，用了 24 h extreme programming( XP(bushi )，实现了一个简易版的Shell，以下是实现的功能介绍。
