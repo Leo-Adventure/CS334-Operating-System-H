@@ -165,9 +165,9 @@ int cd_function(char **tokens)
 
 ![](adjunct/base1.png)
 
-![image-20220710105934233](adjunct\cd1.png)
+<img src="adjunct\cd1.png" alt="image-20220710110106961" style="zoom:100%;" />
 
-![image-20220710110226496](adjunct\cd2.png)
+<img src="adjunct\cd2.png" alt="image-20220710110106961" style="zoom:100%;" />
 
 ### date
 
@@ -250,7 +250,7 @@ int help(char **tokens)
 
 功能截图如下：
 
-![image-20220710110417385](adjunct\help.png)
+<img src="adjunct\help.png" alt="image-20220710110106961" style="zoom:50%;" />
 
 ### echo
 
@@ -303,7 +303,7 @@ int echo_function(char **tokens)
 
 功能截图如下：
 
-![image-20220710110754468](adjunct\echo.png)
+<img src="adjunct\echo.png" alt="image-20220710110106961" style="zoom:100%;" />
 
 ### exit
 
@@ -320,7 +320,7 @@ int exit_function(char **tokens)
 }
 ```
 
-![image-20220710111020002](adjunct\exit.png)
+<img src="adjunct\exit.png" alt="image-20220710110106961" style="zoom:100%;" />
 
 ### 其余 Shell 指令
 
@@ -374,7 +374,7 @@ int outer_process(char **tokens)
 
 实现之后，功能截图如下（进行了 `ps -al`， `wc`，`uname`， `ping` ，`clear`的测试）：
 
-![image-20220710111740723](adjunct\bonus.png)
+<img src="adjunct\bonus.png" alt="image-20220710110106961" style="zoom:100%;" />
 
 ![image-20220710113019052](adjunct\clear.png)
 
@@ -580,13 +580,13 @@ int redirect_function(char * line){
 
 和Pipe 管道的功能实现截图如下：
 
-![image-20220710113433107](adjunct\pipe.png)
+<img src="adjunct\pipe.png" alt="image-20220710110106961" style="zoom:100%;" />
 
 运行之后，两个文件内容截图如下：
 
-![image-20220710113533409](adjunct\include.png)
+<img src="adjunct\include.png" alt="image-20220710110106961" style="zoom:100%;" />
 
-![image-20220710113536982](adjunct\shell.png)
+<img src="adjunct\shell.png" alt="image-20220710110106961" style="zoom:100%;" />
 
 实现了基本的管道输出以及FIFO重定向功能。
 
