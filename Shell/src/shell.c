@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "../include/shell.h"
 
 char *function_names[7] = {
     "pwd", "cd", "date", "echo", "help", "exit", "ls"};
@@ -174,6 +174,7 @@ int pwd_function(char **tokens)
         return 0;
     }
     printf("%s\n", path);
+    free(path);
     return 1;
 }
 
@@ -181,11 +182,6 @@ int pwd_function(char **tokens)
 int cd_function(char **tokens)
 {
 
-    // if(sizeof(tokens) / sizeof(char*) < 2){
-    //     printf("%d\n", sizeof(tokens) / sizeof(char*) < 2);
-    //     perror("Invalid input, the number of arguments should be larger than 1\n");
-    //     return 0;
-    // }
     if (tokens == NULL)
     {
         perror("Invalid input\n");
@@ -237,6 +233,7 @@ int date_function(char **tokens)
     strcat(timeline, ":");
     strcat(timeline, day);
     printf("%s\n", timeline);
+    free(timeline);
     return 1;
 }
 
@@ -302,6 +299,7 @@ int help(char **tokens)
     printf("Also, my shell supports for simple pipes and redirects\n");
     printf("------------------------------------------------------------------------------------\n");
     printf("Have a good time ~\n");
+    
     return 1;
 }
 
@@ -345,9 +343,11 @@ int outer_process(char **tokens)
     return 1;
 }
 
+// exit 退出 shell 程序
 int exit_function(char **tokens)
 {
     printf("logout\n");
+    free(tokens);
     exit(0);
     return 1;
 }
