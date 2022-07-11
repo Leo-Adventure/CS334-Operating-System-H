@@ -295,6 +295,8 @@ int help(char **tokens)
     printf("Here are some example commands\n");
     printf("[ps] have a look at all the running process\n");
     printf("[ping] ping to some websites to test the network\n");
+    printf("[vi] to editor some file\n");
+    printf("[gcc] using gcc to compile C files\n");
     printf("Use the man command for information on other programs.\n");
     printf("Also, my shell supports for simple pipes and redirects\n");
     printf("------------------------------------------------------------------------------------\n");
@@ -307,8 +309,8 @@ int help(char **tokens)
 int outer_process(char **tokens)
 {
     int cnt = 0; // tokens 长度
-    char *args[3];
-    for (int i = 0; i < 3; i++)
+    char *args[10];
+    for (int i = 0; i < 10; i++)
     {
         args[i] = NULL;
     }
