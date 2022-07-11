@@ -1,8 +1,10 @@
+![](https://img.shields.io/apm/l/vim-mode)
+
 ## Simple Shell
 
-在这次的操作系统 Assignment 2 当中，实现了一个简易版的Shell，以下是实现的功能介绍。
+在这次的操作系统 Assignment 2 当中，用了 24 h extreme programming( XP(bushi )，实现了一个简易版的Shell，以下是实现的功能介绍。
 
-### 运行方法
+### 运行方法（linux 环境）
 
 `cmake .`
 
@@ -377,8 +379,11 @@ int outer_process(char **tokens)
 <img src="adjunct\bonus.png" alt="image-20220710110106961" style="zoom:100%;" />
 
 <img src="adjunct\clear.png" alt="image-20220710110106961" style="zoom:100%;" />
+<<<<<<< HEAD
 
 <img src="adjunct\gcc.png" alt="image-20220710110106961" style="zoom:100%;" />
+=======
+>>>>>>> 54ebf88dd7b32ad7168a47cb0c9302a9a40afbfb
 
 ### Pipe 管道
 
