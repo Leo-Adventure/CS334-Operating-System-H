@@ -13,4 +13,4 @@ This repository contains the slides of both lecture and lab, code and notes of O
 
 7/22 上传了 Assignment 3 以及刚考完的 期中 quiz
 
-7/24 上传了第 36 章的课本内容整理
+7/24 上传了第 36、37 章关于 I/O 设备以及磁盘驱动器 的课本内容整理
