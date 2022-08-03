@@ -21,4 +21,6 @@ This repository contains the slides of both lecture and lab, code and notes of O
 
 7/31 上传了整理的期中 quiz 概念题答案
 
+8/1 上传了 16KOS project
+
 8/3 上传了所有lab课件以及 lecture 课件以及 Assignment 5

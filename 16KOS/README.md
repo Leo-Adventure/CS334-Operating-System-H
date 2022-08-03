@@ -27,7 +27,7 @@ boot_page_table_sv39:
 
 下图展示了在本次project 当中，我们的物理地址和虚拟地址的格式以及转换方式
 
-![IMG_1569(20220730-163238)](picture\phy.png)
+![IMG_1569(20220730-163238)](picture/phy.png)
 
 
 
@@ -57,13 +57,13 @@ boot_page_table_sv39:
 
 
 
-![img](picture\qemu1.png)
+![img](picture/qemu1.png)
 
 
 
-![image-20220731213918983](picture\qemu2.png)
+![image-20220731213918983](picture/qemu2.png)
 
-![img](picture\qemu3.png)
+![img](picture/qemu3.png)
 
 ### 物理内存分配及测试
 
@@ -93,7 +93,7 @@ best_fit_alloc_pages(size_t n) {
 
 运行测试的结果如下：
 
-![image-20220801113552585](picture\test1.png)
+![image-20220801113552585](picture/test1.png)
 
 对于 `worst fit`，代码思路是在需要分配 `n` 页的时候，遍历一遍所有的空闲块，找到空闲块大小最不接近 `n`的空闲块，之后从这个空闲块当中分配出 `n` 个页面。
 
@@ -129,7 +129,7 @@ worst_fit_alloc_pages(size_t n)
 
 运行之后，可以通过所有的测试，效果截图如下：
 
-![image-20220801113616173](picture\test2.png)
+![image-20220801113616173](picture/test2.png)
 
 对于实现的 `next_fit`算法，基本思想是记录每一次分配的页面的空闲块所在的位置，下一次从这里开始遍历，而不是每一次都从 `free_list`的队首开始遍历。
 
@@ -162,7 +162,7 @@ next_alloc_pages(size_t n) {
 
 由于这个方法只是改变了开始遍历的起始位置，所以测试和 `default_pmm` 的测试是一样的，也可以完全通过测试
 
-![image-20220801113742142](picture\test3.png)
+![image-20220801113742142](picture/test3.png)
 
 
 
@@ -185,7 +185,7 @@ next_alloc_pages(size_t n) {
 
 运行结果：
 
-![img](picture\test4.png)
+![img](picture/test4.png)
 
 在初始分配的时间片是 5 时，进程调度可以按照 RR 的顺序轮转执行。
 
