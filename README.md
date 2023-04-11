@@ -1,5 +1,5 @@
 # CS334-Operating-System-H
-This repository contains the slides of both lecture and lab, code and notes of Operating System (H) lectured by Prof. Yinqian Zhang in 2022 Summer semester in SUSTech.
+This repository contains the slides of both lecture and lab, code and notes of Operating System (H) lectured by Prof. Yinqian Zhang in 2022 Summer semester in **SUSTech**.
 
 Hopefully, this repository could help you in learning operating system, which is quite interesting.
 
